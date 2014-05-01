@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22C8A651912FC0000E16BC2 /* SDModuleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A641912FC0000E16BC2 /* SDModuleLayout.m */; };
 		E2A074B41909ADB700C70ECE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B31909ADB700C70ECE /* Foundation.framework */; };
 		E2A074B61909ADB700C70ECE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B51909ADB700C70ECE /* CoreGraphics.framework */; };
 		E2A074B81909ADB700C70ECE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B71909ADB700C70ECE /* UIKit.framework */; };
@@ -144,6 +145,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E22C8A631912FC0000E16BC2 /* SDModuleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModuleLayout.h; path = SDModules/SDModuleLayout.h; sourceTree = "<group>"; };
+		E22C8A641912FC0000E16BC2 /* SDModuleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModuleLayout.m; path = SDModules/SDModuleLayout.m; sourceTree = "<group>"; };
 		E2A074B01909ADB700C70ECE /* SDModulesTestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDModulesTestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A074B31909ADB700C70ECE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E2A074B51909ADB700C70ECE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -812,6 +815,8 @@
 				E2A07643190EEE3B00C70ECE /* SDModuleDescription.m */,
 				E2A0763B190ED5F400C70ECE /* SDModulesCredentials.h */,
 				E2A0763C190ED5F400C70ECE /* SDModulesCredentials.m */,
+				E22C8A631912FC0000E16BC2 /* SDModuleLayout.h */,
+				E22C8A641912FC0000E16BC2 /* SDModuleLayout.m */,
 				E2A07638190ED53700C70ECE /* SDModules.h */,
 				E2A07639190ED53700C70ECE /* SDModules.m */,
 			);
@@ -980,6 +985,7 @@
 				E2A07630190EBEC800C70ECE /* SDImageCache.m in Sources */,
 				E2A0762E190EBEC800C70ECE /* NSURLRequest+SDExtensions.m in Sources */,
 				E2A07631190EBEC800C70ECE /* SDMockService.m in Sources */,
+				E22C8A651912FC0000E16BC2 /* SDModuleLayout.m in Sources */,
 				E2A075FF190EBEC800C70ECE /* SDMultilineLabel.m in Sources */,
 				E2A075D2190EBEC800C70ECE /* NSArray+SDExtensions.m in Sources */,
 				E2A07635190EBEC800C70ECE /* UIImageView+SDExtensions.m in Sources */,
@@ -1246,6 +1252,7 @@
 				E2A074E71909ADB700C70ECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2A074E81909ADB700C70ECE /* Build configuration list for PBXNativeTarget "SDModulesTestHarnessTests" */ = {
 			isa = XCConfigurationList;
@@ -1254,6 +1261,7 @@
 				E2A074EA1909ADB700C70ECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
