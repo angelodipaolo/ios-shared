@@ -8,9 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SDModulesCredentials : NSObject <NSCopying>
+@protocol SDModulesClientCredentials <NSObject, NSCopying>
 
+/**
+ * Provides the application key.
+ * @returns The application key.
+ */
+@required
 @property (nonatomic, readonly) NSString* applicationKey;
+
+/**
+ * Provides the private key.
+ * @returns The private key.
+ */
+@required
 @property (nonatomic, readonly) NSString* privateKey;
 
 @end

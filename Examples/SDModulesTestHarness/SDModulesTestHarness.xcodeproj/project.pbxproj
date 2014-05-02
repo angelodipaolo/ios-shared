@@ -127,8 +127,7 @@
 		E2A07633190EBEC800C70ECE /* SDWebService+SDProcessingBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A075C9190EBEC800C70ECE /* SDWebService+SDProcessingBlocks.m */; };
 		E2A07634190EBEC800C70ECE /* SDWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A075CB190EBEC800C70ECE /* SDWebService.m */; };
 		E2A07635190EBEC800C70ECE /* UIImageView+SDExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A075CD190EBEC800C70ECE /* UIImageView+SDExtensions.m */; };
-		E2A0763A190ED53700C70ECE /* SDModules.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A07639190ED53700C70ECE /* SDModules.m */; };
-		E2A0763D190ED5F400C70ECE /* SDModulesCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A0763C190ED5F400C70ECE /* SDModulesCredentials.m */; };
+		E2A0763A190ED53700C70ECE /* SDModulesClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A07639190ED53700C70ECE /* SDModulesClient.m */; };
 		E2A07644190EEE3B00C70ECE /* SDModuleContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A0763F190EEE3B00C70ECE /* SDModuleContainer.m */; };
 		E2A07645190EEE3B00C70ECE /* SDModuleContainerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A07641190EEE3B00C70ECE /* SDModuleContainerLayout.m */; };
 		E2A07646190EEE3B00C70ECE /* SDModuleDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A07643190EEE3B00C70ECE /* SDModuleDescription.m */; };
@@ -376,10 +375,9 @@
 		E2A075CB190EBEC800C70ECE /* SDWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebService.m; sourceTree = "<group>"; };
 		E2A075CC190EBEC800C70ECE /* UIImageView+SDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDExtensions.h"; sourceTree = "<group>"; };
 		E2A075CD190EBEC800C70ECE /* UIImageView+SDExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDExtensions.m"; sourceTree = "<group>"; };
-		E2A07638190ED53700C70ECE /* SDModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModules.h; path = SDModules/SDModules.h; sourceTree = "<group>"; };
-		E2A07639190ED53700C70ECE /* SDModules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModules.m; path = SDModules/SDModules.m; sourceTree = "<group>"; };
+		E2A07638190ED53700C70ECE /* SDModulesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModulesClient.h; path = SDModules/SDModulesClient.h; sourceTree = "<group>"; };
+		E2A07639190ED53700C70ECE /* SDModulesClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModulesClient.m; path = SDModules/SDModulesClient.m; sourceTree = "<group>"; };
 		E2A0763B190ED5F400C70ECE /* SDModulesCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModulesCredentials.h; path = SDModules/SDModulesCredentials.h; sourceTree = "<group>"; };
-		E2A0763C190ED5F400C70ECE /* SDModulesCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModulesCredentials.m; path = SDModules/SDModulesCredentials.m; sourceTree = "<group>"; };
 		E2A0763E190EEE3B00C70ECE /* SDModuleContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModuleContainer.h; path = SDModules/SDModuleContainer.h; sourceTree = "<group>"; };
 		E2A0763F190EEE3B00C70ECE /* SDModuleContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModuleContainer.m; path = SDModules/SDModuleContainer.m; sourceTree = "<group>"; };
 		E2A07640190EEE3B00C70ECE /* SDModuleContainerLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModuleContainerLayout.h; path = SDModules/SDModuleContainerLayout.h; sourceTree = "<group>"; };
@@ -812,11 +810,10 @@
 				E2A07642190EEE3B00C70ECE /* SDModuleDescription.h */,
 				E2A07643190EEE3B00C70ECE /* SDModuleDescription.m */,
 				E2A0763B190ED5F400C70ECE /* SDModulesCredentials.h */,
-				E2A0763C190ED5F400C70ECE /* SDModulesCredentials.m */,
 				E22C8A631912FC0000E16BC2 /* SDModuleLayout.h */,
 				E22C8A641912FC0000E16BC2 /* SDModuleLayout.m */,
-				E2A07638190ED53700C70ECE /* SDModules.h */,
-				E2A07639190ED53700C70ECE /* SDModules.m */,
+				E2A07638190ED53700C70ECE /* SDModulesClient.h */,
+				E2A07639190ED53700C70ECE /* SDModulesClient.m */,
 			);
 			name = SDModules;
 			sourceTree = "<group>";
@@ -962,7 +959,6 @@
 				E2A0762D190EBEC800C70ECE /* NSURLCache+SDExtensions.m in Sources */,
 				E2A07634190EBEC800C70ECE /* SDWebService.m in Sources */,
 				E2A07608190EBEC800C70ECE /* SDPickerView.m in Sources */,
-				E2A0763D190ED5F400C70ECE /* SDModulesCredentials.m in Sources */,
 				E2A0760A190EBEC800C70ECE /* SDPullNavigationBar.m in Sources */,
 				E2A0760D190EBEC800C70ECE /* SDPullNavigationBarControlsView.m in Sources */,
 				E2A07600190EBEC800C70ECE /* SDNavigationBarSearchField.m in Sources */,
@@ -1011,7 +1007,7 @@
 				E2A075D7190EBEC800C70ECE /* NSLayoutConstraint+SDExtensions.m in Sources */,
 				E2A075DE190EBEC800C70ECE /* SDCompletionGroup.m in Sources */,
 				E2A07615190EBEC800C70ECE /* SDSearchBar.m in Sources */,
-				E2A0763A190ED53700C70ECE /* SDModules.m in Sources */,
+				E2A0763A190ED53700C70ECE /* SDModulesClient.m in Sources */,
 				E2A075D4190EBEC800C70ECE /* NSDate+SDExtensions.m in Sources */,
 				E2A0762F190EBEC800C70ECE /* Reachability.m in Sources */,
 				E2A07620190EBEC800C70ECE /* SDWebViewCell.m in Sources */,

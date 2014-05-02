@@ -8,5 +8,7 @@
 
 #import "SDModuleContainer.h"
 
+#import "SDModuleContainerLayout.h"
+
 @implementation SDModuleContainer
 @end

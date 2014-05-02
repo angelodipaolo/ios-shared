@@ -1,39 +1,28 @@
 //
-//  SDModules.m
+//  SDModulesClient.m
 //  SDModules
 //
 //  Created by Steven Woolgar on 04/28/2014.
 //  Copyright (c) 2014 Wal-mart Stores, Inc. All rights reserved.
 //
 
-#import "SDModules.h"
+#import "SDModulesClient.h"
 
 #import "SDModulesCredentials.h"
 
-@implementation SDModules
-
-+ (instancetype)sharedInstance
-{
-	static dispatch_once_t oncePredicate;
-	static id sSharedInstance = nil;
-	dispatch_once(&oncePredicate, ^
-    {
-        sSharedInstance = [[[self class] alloc] init];
-    });
-
-	return sSharedInstance;
-}
+@implementation SDModulesClient
 
 /*
  * Setup a session with the modules server.
+ *
  * The application key should be in the form of a reverse dns-like string.
  * com.walmart.market.platform e.g. com.walmart.walmart.ipad or com.walmart.sams.iphone
  */
 
-- (SDModulesCredentials*)credentialsWithApplicationKey:(NSString*)applicationKey
-                                         andPrivateKey:(NSString*)privateKey
+- (void)connectWithApplicationKey:(NSString*)applicationKey
+                    andPrivateKey:(NSString*)privateKey
+            withCompletionHandler:(SDMConnectCompletionHandler)completionHandler
 {
-    return nil;
 }
 
 /*
@@ -46,7 +35,7 @@
 
 - (SDModuleLayouts*)moduleLayoutsForStates:(NSSet*)applicationStates
                       andRegisteredModules:(NSSet*)modules
-                     withCompletionHandler:(SDMCompletionHandler)completionHandler
+                     withCompletionHandler:(SDMLayoutsCompletionHandler)completionHandler
 {
     return nil;
 }
