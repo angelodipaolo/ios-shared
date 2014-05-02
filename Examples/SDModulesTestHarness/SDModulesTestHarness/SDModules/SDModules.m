@@ -45,9 +45,10 @@
  */
 
 - (SDModuleLayouts*)moduleLayoutsForStates:(NSSet*)applicationStates
-          andRegisteredModules:(NSSet*)modules
-         withCompletionHandler:(SDMCompletionHandler)completionHandler
+                      andRegisteredModules:(NSSet*)modules
+                     withCompletionHandler:(SDMCompletionHandler)completionHandler
 {
+    return nil;
 }
 
 @end

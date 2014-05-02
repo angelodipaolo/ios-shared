@@ -376,7 +376,6 @@
 		E2A075CB190EBEC800C70ECE /* SDWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebService.m; sourceTree = "<group>"; };
 		E2A075CC190EBEC800C70ECE /* UIImageView+SDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDExtensions.h"; sourceTree = "<group>"; };
 		E2A075CD190EBEC800C70ECE /* UIImageView+SDExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDExtensions.m"; sourceTree = "<group>"; };
-		E2A07637190ED3C600C70ECE /* SDModuleApplicationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModuleApplicationProtocol.h; path = SDModules/SDModuleApplicationProtocol.h; sourceTree = "<group>"; };
 		E2A07638190ED53700C70ECE /* SDModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModules.h; path = SDModules/SDModules.h; sourceTree = "<group>"; };
 		E2A07639190ED53700C70ECE /* SDModules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModules.m; path = SDModules/SDModules.m; sourceTree = "<group>"; };
 		E2A0763B190ED5F400C70ECE /* SDModulesCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModulesCredentials.h; path = SDModules/SDModulesCredentials.h; sourceTree = "<group>"; };
@@ -806,7 +805,6 @@
 		E2A07636190ED10400C70ECE /* SDModules */ = {
 			isa = PBXGroup;
 			children = (
-				E2A07637190ED3C600C70ECE /* SDModuleApplicationProtocol.h */,
 				E2A0763E190EEE3B00C70ECE /* SDModuleContainer.h */,
 				E2A0763F190EEE3B00C70ECE /* SDModuleContainer.m */,
 				E2A07640190EEE3B00C70ECE /* SDModuleContainerLayout.h */,
