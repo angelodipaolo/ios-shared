@@ -21,8 +21,10 @@
  * Setup the default layout to use if we can't find the server or it can't return in time for display requirements.
  */
 
-- (void)setDefaultModuleLayoutsForStates:(NSSet*)applicationStates andRegisteredModules:(NSSet*)modules
+- (void)setDefaultModuleLayoutsForStates:(NSArray*)applicationStates andRegisteredModules:(NSArray*)modules
 {
+    NSURL* url = [[NSBundle bundleForClass:[self class]] URLForResource:@"SDDefaultModulesLayout" withExtension:@"json"];
+    self.moduleLayoutManager = [SDModuleLayoutManager managerWithJSONFileURL:url];
 }
 
 /*

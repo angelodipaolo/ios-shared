@@ -10,6 +10,7 @@
 
 @interface SDModuleLayoutManager : NSObject
 
++ (instancetype)managerWithJSONFileURL:(NSURL*)defaultLayoutURL;
 + (instancetype)managerWithDictionary:(NSDictionary*)fetchLayoutsResult;
 
 @end
