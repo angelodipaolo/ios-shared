@@ -21,14 +21,14 @@ typedef void (^SDMConnectCompletionHandler)(NSError*);
 @interface SDModulesClient : NSObject
 
 @property (nonatomic, strong, readonly) NSArray* supportedStates;
-@property (nonatomic, strong, readonly) NSArray* registeredModules;
+@property (nonatomic, strong, readonly) NSDictionary* registeredModules;
 @property (nonatomic, strong) SDModuleLayoutManager* moduleLayoutManager;
 
 /*
  * Get the default layout to use if we can't find the server or it can't return in time for display requirements.
  */
 
-- (void)setDefaultModuleLayoutsForStates:(NSArray*)applicationStates andRegisteredModules:(NSArray*)modules;
+- (void)setDefaultModuleLayoutsForStates:(NSArray*)applicationStates andRegisteredModules:(NSDictionary*)modules;
 
 /*
  * Setup a session with the modules server.
@@ -46,6 +46,6 @@ typedef void (^SDMConnectCompletionHandler)(NSError*);
  * This method will fetch the layouts given the constraints supplied and return the results from the server in the completion handler.
  */
 
-- (void)moduleLayoutsForStates:(NSArray*)applicationStates andRegisteredModules:(NSArray*)modules withCompletionHandler:(SDMLayoutsCompletionHandler)completionHandler;
+- (void)moduleLayoutsForStates:(NSArray*)applicationStates andRegisteredModules:(NSDictionary*)modules withCompletionHandler:(SDMLayoutsCompletionHandler)completionHandler;
 
 @end

@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class SDModuleContainer;
+
 @interface SDModuleLayoutManager : NSObject
+
+@property (nonatomic, strong) SDModuleContainer* moduleLayoutContainer;
 
 + (instancetype)managerWithJSONFileURL:(NSURL*)defaultLayoutURL;
 + (instancetype)managerWithDictionary:(NSDictionary*)fetchLayoutsResult;

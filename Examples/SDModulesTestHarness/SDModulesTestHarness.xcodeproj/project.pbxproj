@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		E22C8A651912FC0000E16BC2 /* SDModuleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A641912FC0000E16BC2 /* SDModuleLayout.m */; };
 		E22C8A6A1917E84400E16BC2 /* SDModuleLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A691917E84400E16BC2 /* SDModuleLayoutManager.m */; };
+		E22C8A701918037F00E16BC2 /* SDMTProductFeedModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A6F1918037F00E16BC2 /* SDMTProductFeedModuleController.m */; };
+		E22C8A75191803EA00E16BC2 /* SDMTMerchandisingModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A72191803EA00E16BC2 /* SDMTMerchandisingModuleController.m */; };
+		E22C8A76191803EA00E16BC2 /* SDMTStoreInformationModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A74191803EA00E16BC2 /* SDMTStoreInformationModuleController.m */; };
+		E22C8A791918042100E16BC2 /* SDModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A781918042100E16BC2 /* SDModuleController.m */; };
 		E2A074B41909ADB700C70ECE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B31909ADB700C70ECE /* Foundation.framework */; };
 		E2A074B61909ADB700C70ECE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B51909ADB700C70ECE /* CoreGraphics.framework */; };
 		E2A074B81909ADB700C70ECE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B71909ADB700C70ECE /* UIKit.framework */; };
@@ -149,6 +153,14 @@
 		E22C8A641912FC0000E16BC2 /* SDModuleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModuleLayout.m; path = SDModules/SDModuleLayout.m; sourceTree = "<group>"; };
 		E22C8A681917E84400E16BC2 /* SDModuleLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModuleLayoutManager.h; path = SDModules/SDModuleLayoutManager.h; sourceTree = "<group>"; };
 		E22C8A691917E84400E16BC2 /* SDModuleLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModuleLayoutManager.m; path = SDModules/SDModuleLayoutManager.m; sourceTree = "<group>"; };
+		E22C8A6E1918037F00E16BC2 /* SDMTProductFeedModuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMTProductFeedModuleController.h; sourceTree = "<group>"; };
+		E22C8A6F1918037F00E16BC2 /* SDMTProductFeedModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMTProductFeedModuleController.m; sourceTree = "<group>"; };
+		E22C8A71191803EA00E16BC2 /* SDMTMerchandisingModuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMTMerchandisingModuleController.h; sourceTree = "<group>"; };
+		E22C8A72191803EA00E16BC2 /* SDMTMerchandisingModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMTMerchandisingModuleController.m; sourceTree = "<group>"; };
+		E22C8A73191803EA00E16BC2 /* SDMTStoreInformationModuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMTStoreInformationModuleController.h; sourceTree = "<group>"; };
+		E22C8A74191803EA00E16BC2 /* SDMTStoreInformationModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMTStoreInformationModuleController.m; sourceTree = "<group>"; };
+		E22C8A771918042100E16BC2 /* SDModuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModuleController.h; path = SDModules/SDModuleController.h; sourceTree = "<group>"; };
+		E22C8A781918042100E16BC2 /* SDModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModuleController.m; path = SDModules/SDModuleController.m; sourceTree = "<group>"; };
 		E2A074B01909ADB700C70ECE /* SDModulesTestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDModulesTestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A074B31909ADB700C70ECE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E2A074B51909ADB700C70ECE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -450,6 +462,12 @@
 				E2A07636190ED10400C70ECE /* SDModules */,
 				E2A074C21909ADB700C70ECE /* SDAppDelegate.h */,
 				E2A074C31909ADB700C70ECE /* SDAppDelegate.m */,
+				E22C8A6E1918037F00E16BC2 /* SDMTProductFeedModuleController.h */,
+				E22C8A6F1918037F00E16BC2 /* SDMTProductFeedModuleController.m */,
+				E22C8A71191803EA00E16BC2 /* SDMTMerchandisingModuleController.h */,
+				E22C8A72191803EA00E16BC2 /* SDMTMerchandisingModuleController.m */,
+				E22C8A73191803EA00E16BC2 /* SDMTStoreInformationModuleController.h */,
+				E22C8A74191803EA00E16BC2 /* SDMTStoreInformationModuleController.m */,
 				E2A074C51909ADB700C70ECE /* Main_iPhone.storyboard */,
 				E2A074C81909ADB700C70ECE /* Main_iPad.storyboard */,
 				E2A074CB1909ADB700C70ECE /* SDViewController.h */,
@@ -805,6 +823,8 @@
 		E2A07636190ED10400C70ECE /* SDModules */ = {
 			isa = PBXGroup;
 			children = (
+				E22C8A771918042100E16BC2 /* SDModuleController.h */,
+				E22C8A781918042100E16BC2 /* SDModuleController.m */,
 				E2A0763E190EEE3B00C70ECE /* SDModuleContainer.h */,
 				E2A0763F190EEE3B00C70ECE /* SDModuleContainer.m */,
 				E2A07640190EEE3B00C70ECE /* SDModuleContainerLayout.h */,
@@ -955,6 +975,7 @@
 				E2A075F7190EBEC800C70ECE /* SDCreditCardField.m in Sources */,
 				E2A074CD1909ADB700C70ECE /* SDViewController.m in Sources */,
 				E2A07645190EEE3B00C70ECE /* SDModuleContainerLayout.m in Sources */,
+				E22C8A75191803EA00E16BC2 /* SDMTMerchandisingModuleController.m in Sources */,
 				E2A07604190EBEC800C70ECE /* SDPhotoImageView.m in Sources */,
 				E2A07623190EBEC800C70ECE /* UIAlertView+SDExtensions.m in Sources */,
 				E2A07628190EBEC800C70ECE /* UIScreen+SDExtensions.m in Sources */,
@@ -989,6 +1010,8 @@
 				E2A07635190EBEC800C70ECE /* UIImageView+SDExtensions.m in Sources */,
 				E2A07601190EBEC800C70ECE /* SDNumberTextField.m in Sources */,
 				E2A075E0190EBEC800C70ECE /* SDModelObject.m in Sources */,
+				E22C8A701918037F00E16BC2 /* SDMTProductFeedModuleController.m in Sources */,
+				E22C8A791918042100E16BC2 /* SDModuleController.m in Sources */,
 				E2A075F1190EBEC800C70ECE /* SDCheckbox.m in Sources */,
 				E2A075E6190EBEC800C70ECE /* CLLocation+SDExtensions.m in Sources */,
 				E2A0762A190EBEC800C70ECE /* UIViewController+SDExtensions.m in Sources */,
@@ -1020,6 +1043,7 @@
 				E2A075E5190EBEC800C70ECE /* SDLog.m in Sources */,
 				E2A0761D190EBEC800C70ECE /* SDTableViewSectionController.m in Sources */,
 				E2A07610190EBEC800C70ECE /* SDPaintCodeButton.m in Sources */,
+				E22C8A76191803EA00E16BC2 /* SDMTStoreInformationModuleController.m in Sources */,
 				E2A075FB190EBEC800C70ECE /* SDFormFieldContainer.m in Sources */,
 				E2A07613190EBEC800C70ECE /* SDQuantityView.m in Sources */,
 				E2A07619190EBEC800C70ECE /* SDSectionedTableView.m in Sources */,

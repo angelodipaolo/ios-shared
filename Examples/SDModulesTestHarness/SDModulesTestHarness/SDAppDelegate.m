@@ -11,16 +11,20 @@
 #import "SDModulesClient.h"
 #import "SDModuleLayoutManager.h"
 
+#import "SDMTProductFeedModuleController.h"
+#import "SDMTMerchandisingModuleController.h"
+#import "SDMTStoreInformationModuleController.h"
+
 @implementation SDAppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     // Setup and SDModulesClient and fetch layouts
 
-    NSArray* supportedStates = @[@"signedin|signedout", @"instoremode|online-shopping"];
-    NSArray* supportedModules = @[@"com.walmart.sdmodulestestharness.ipad.product-feeds",
-                                  @"com.walmart.sdmodulestestharness.ipad.merchandising",
-                                  @"com.walmart.sdmodulestestharness.ipad.store-information"];
+    NSArray* supportedStates = @[ @"signedin|signedout", @"instoremode|online-shopping" ];
+    NSDictionary* supportedModules = @{ @"product-feeds"     : [SDMTProductFeedModuleController class],
+                                        @"merchandising"     : [SDMTMerchandisingModuleController class],
+                                        @"store-information" : [SDMTStoreInformationModuleController class] };
 
     // Intialize our global copy of the modules client.
     self.moduleClient = [[SDModulesClient alloc] init];

@@ -12,7 +12,7 @@
 
 @interface SDModulesClient()
 @property (nonatomic, strong, readwrite) NSArray* supportedStates;
-@property (nonatomic, strong, readwrite) NSArray* registeredModules;
+@property (nonatomic, strong, readwrite) NSDictionary* registeredModules;
 @end
 
 @implementation SDModulesClient
@@ -21,7 +21,7 @@
  * Setup the default layout to use if we can't find the server or it can't return in time for display requirements.
  */
 
-- (void)setDefaultModuleLayoutsForStates:(NSArray*)applicationStates andRegisteredModules:(NSArray*)modules
+- (void)setDefaultModuleLayoutsForStates:(NSArray*)applicationStates andRegisteredModules:(NSDictionary*)modules
 {
     NSURL* url = [[NSBundle bundleForClass:[self class]] URLForResource:@"SDDefaultModulesLayout" withExtension:@"json"];
     self.moduleLayoutManager = [SDModuleLayoutManager managerWithJSONFileURL:url];
@@ -51,7 +51,7 @@
  */
 
 - (void)moduleLayoutsForStates:(NSArray*)applicationStates
-          andRegisteredModules:(NSArray*)modules
+          andRegisteredModules:(NSDictionary*)modules
          withCompletionHandler:(SDMLayoutsCompletionHandler)completionHandler
 {
     NSAssert(applicationStates, @"You should probably support at least one application state");

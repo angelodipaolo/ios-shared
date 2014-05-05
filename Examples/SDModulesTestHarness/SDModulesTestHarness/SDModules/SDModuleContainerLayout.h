@@ -8,7 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@class SDModuleContainerLayout;
-
 @interface SDModuleContainerLayout : NSObject
 @end
