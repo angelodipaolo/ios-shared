@@ -13,6 +13,7 @@
 		E22C8A75191803EA00E16BC2 /* SDMTMerchandisingModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A72191803EA00E16BC2 /* SDMTMerchandisingModuleController.m */; };
 		E22C8A76191803EA00E16BC2 /* SDMTStoreInformationModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A74191803EA00E16BC2 /* SDMTStoreInformationModuleController.m */; };
 		E22C8A791918042100E16BC2 /* SDModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A781918042100E16BC2 /* SDModuleController.m */; };
+		E22C8A8E19182AB200E16BC2 /* SDMTStoreInformationModule-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22C8A8C19182AB200E16BC2 /* SDMTStoreInformationModule-iPhone.storyboard */; };
 		E2A074B41909ADB700C70ECE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B31909ADB700C70ECE /* Foundation.framework */; };
 		E2A074B61909ADB700C70ECE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B51909ADB700C70ECE /* CoreGraphics.framework */; };
 		E2A074B81909ADB700C70ECE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B71909ADB700C70ECE /* UIKit.framework */; };
@@ -161,6 +162,7 @@
 		E22C8A74191803EA00E16BC2 /* SDMTStoreInformationModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMTStoreInformationModuleController.m; sourceTree = "<group>"; };
 		E22C8A771918042100E16BC2 /* SDModuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModuleController.h; path = SDModules/SDModuleController.h; sourceTree = "<group>"; };
 		E22C8A781918042100E16BC2 /* SDModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModuleController.m; path = SDModules/SDModuleController.m; sourceTree = "<group>"; };
+		E22C8A8D19182AB200E16BC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SDModulesTestHarness/Base.lproj/SDMTStoreInformationModule-iPhone.storyboard"; sourceTree = "<group>"; };
 		E2A074B01909ADB700C70ECE /* SDModulesTestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDModulesTestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A074B31909ADB700C70ECE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E2A074B51909ADB700C70ECE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -468,6 +470,7 @@
 				E22C8A72191803EA00E16BC2 /* SDMTMerchandisingModuleController.m */,
 				E22C8A73191803EA00E16BC2 /* SDMTStoreInformationModuleController.h */,
 				E22C8A74191803EA00E16BC2 /* SDMTStoreInformationModuleController.m */,
+				E22C8A8C19182AB200E16BC2 /* SDMTStoreInformationModule-iPhone.storyboard */,
 				E2A074C51909ADB700C70ECE /* Main_iPhone.storyboard */,
 				E2A074C81909ADB700C70ECE /* Main_iPad.storyboard */,
 				E2A074CB1909ADB700C70ECE /* SDViewController.h */,
@@ -928,6 +931,7 @@
 				E2A074C71909ADB700C70ECE /* Main_iPhone.storyboard in Resources */,
 				E2A074BE1909ADB700C70ECE /* InfoPlist.strings in Resources */,
 				E2A07607190EBEC800C70ECE /* SDPickerModalViewController.xib in Resources */,
+				E22C8A8E19182AB200E16BC2 /* SDMTStoreInformationModule-iPhone.storyboard in Resources */,
 				E2A075D1190EBEC800C70ECE /* README.md in Resources */,
 				E2A075D0190EBEC800C70ECE /* Project-iOS-Release.xcconfig in Resources */,
 			);
@@ -1079,6 +1083,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E22C8A8C19182AB200E16BC2 /* SDMTStoreInformationModule-iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E22C8A8D19182AB200E16BC2 /* Base */,
+			);
+			name = "SDMTStoreInformationModule-iPhone.storyboard";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		E2A074BC1909ADB700C70ECE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
