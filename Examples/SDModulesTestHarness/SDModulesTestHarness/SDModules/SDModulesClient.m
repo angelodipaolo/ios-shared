@@ -8,7 +8,12 @@
 
 #import "SDModulesClient.h"
 
-#import "SDModulesCredentials.h"
+#import "SDModuleLayoutManager.h"
+
+@interface SDModulesClient()
+@property (nonatomic, strong, readwrite) NSArray* supportedStates;
+@property (nonatomic, strong, readwrite) NSArray* registeredModules;
+@end
 
 @implementation SDModulesClient
 
@@ -31,6 +36,8 @@
                     andPrivateKey:(NSString*)privateKey
             withCompletionHandler:(SDMConnectCompletionHandler)completionHandler
 {
+    if(completionHandler)
+        completionHandler(nil);
 }
 
 /*
@@ -41,10 +48,18 @@
  * from the server.
  */
 
-- (void)moduleLayoutsForStates:(NSSet*)applicationStates
-          andRegisteredModules:(NSSet*)modules
+- (void)moduleLayoutsForStates:(NSArray*)applicationStates
+          andRegisteredModules:(NSArray*)modules
          withCompletionHandler:(SDMLayoutsCompletionHandler)completionHandler
 {
+    NSAssert(applicationStates, @"You should probably support at least one application state");
+    NSAssert(modules, @"You are required to have at least one registered module");
+
+    self.supportedStates = applicationStates;
+    self.registeredModules = modules;
+
+    if(completionHandler)
+        completionHandler(@{ @"key" : @"data" }, [NSError errorWithDomain:NSPOSIXErrorDomain code:-1 userInfo:nil]);
 }
 
 @end

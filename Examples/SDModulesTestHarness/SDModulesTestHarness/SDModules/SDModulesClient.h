@@ -9,21 +9,26 @@
 #import <UIKit/UIKit.h>
 
 @class SDModulesCredentials;
-@class SDModuleLayouts;
+@class SDModuleLayoutManager;
 
-typedef void (^SDMLayoutsCompletionHandler)(SDModuleLayouts*, NSError*);
+typedef void (^SDMLayoutsCompletionHandler)(NSDictionary*, NSError*);
 typedef void (^SDMConnectCompletionHandler)(NSError*);
+
+/*
+ * Instantiate this and keep a strong reference to it in a global place. Like your application delegate.
+ */
 
 @interface SDModulesClient : NSObject
 
-@property (nonatomic, strong) NSArray* registeredModules;
-@property (nonatomic, strong) NSArray* moduleLayouts;
+@property (nonatomic, strong, readonly) NSArray* supportedStates;
+@property (nonatomic, strong, readonly) NSArray* registeredModules;
+@property (nonatomic, strong) SDModuleLayoutManager* moduleLayoutManager;
 
 /*
  * Get the default layout to use if we can't find the server or it can't return in time for display requirements.
  */
 
-- (void)setDefaultModuleLayoutsForStates:(NSSet*)applicationStates andRegisteredModules:(NSSet*)modules;
+- (void)setDefaultModuleLayoutsForStates:(NSArray*)applicationStates andRegisteredModules:(NSArray*)modules;
 
 /*
  * Setup a session with the modules server.
@@ -36,12 +41,11 @@ typedef void (^SDMConnectCompletionHandler)(NSError*);
 
 /*
  * Supply a set of states that you support (you will get a layout for each state) as well
- * as a set of modules that you support.
+ * as a set of modules that you support (registered modules).
  *
- * This method will fetch the layouts given the constraints supplied in the completion handler
- * from the server.
+ * This method will fetch the layouts given the constraints supplied and return the results from the server in the completion handler.
  */
 
-- (void)moduleLayoutsForStates:(NSSet*)applicationStates andRegisteredModules:(NSSet*)modules withCompletionHandler:(SDMLayoutsCompletionHandler)completionHandler;
+- (void)moduleLayoutsForStates:(NSArray*)applicationStates andRegisteredModules:(NSArray*)modules withCompletionHandler:(SDMLayoutsCompletionHandler)completionHandler;
 
 @end
