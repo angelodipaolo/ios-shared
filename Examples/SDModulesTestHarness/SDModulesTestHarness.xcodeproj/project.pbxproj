@@ -145,7 +145,6 @@
 		E2C1E5ED191A8CE400094340 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C1E5EB191A8CE400094340 /* MainWindow.xib */; };
 		E2C1E5F6191A8E1300094340 /* HomeScreen_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C1E5EE191A8E1300094340 /* HomeScreen_iPad.storyboard */; };
 		E2C1E5F7191A8E1300094340 /* HomeScreen_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C1E5F0191A8E1300094340 /* HomeScreen_iPhone.storyboard */; };
-		E2C1E5F8191A8E1300094340 /* Orderhistory_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C1E5F2191A8E1300094340 /* Orderhistory_iPad.storyboard */; };
 		E2C1E5F9191A8E1300094340 /* OrderHistory_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C1E5F4191A8E1300094340 /* OrderHistory_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -421,7 +420,6 @@
 		E2C1E5EC191A8CE400094340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		E2C1E5EF191A8E1300094340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen_iPad.storyboard; sourceTree = "<group>"; };
 		E2C1E5F1191A8E1300094340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen_iPhone.storyboard; sourceTree = "<group>"; };
-		E2C1E5F3191A8E1300094340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Orderhistory_iPad.storyboard; sourceTree = "<group>"; };
 		E2C1E5F5191A8E1300094340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OrderHistory_iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -875,7 +873,6 @@
 			children = (
 				E2C1E5EE191A8E1300094340 /* HomeScreen_iPad.storyboard */,
 				E2C1E5F0191A8E1300094340 /* HomeScreen_iPhone.storyboard */,
-				E2C1E5F2191A8E1300094340 /* Orderhistory_iPad.storyboard */,
 				E2C1E5F4191A8E1300094340 /* OrderHistory_iPhone.storyboard */,
 				E2C1E5DE191A8AD500094340 /* SDGlobalNavMenu.storyboard */,
 				E2C1E5E7191A8C3E00094340 /* CustomPullNavigationBarTabButton.h */,
@@ -972,7 +969,6 @@
 				E2C1E5E0191A8AD500094340 /* SDGlobalNavMenu.storyboard in Resources */,
 				E2A074CF1909ADB700C70ECE /* Images.xcassets in Resources */,
 				E2C1E5F7191A8E1300094340 /* HomeScreen_iPhone.storyboard in Resources */,
-				E2C1E5F8191A8E1300094340 /* Orderhistory_iPad.storyboard in Resources */,
 				E2A075CE190EBEC800C70ECE /* Global-iOS.xcconfig in Resources */,
 				E2A07605190EBEC800C70ECE /* SDPickerModalViewController-iOS7.xib in Resources */,
 				E2A07621190EBEC800C70ECE /* SDWebViewCell.xib in Resources */,
@@ -1217,14 +1213,6 @@
 				E2C1E5F1191A8E1300094340 /* Base */,
 			);
 			name = HomeScreen_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		E2C1E5F2191A8E1300094340 /* Orderhistory_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E2C1E5F3191A8E1300094340 /* Base */,
-			);
-			name = Orderhistory_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		E2C1E5F4191A8E1300094340 /* OrderHistory_iPhone.storyboard */ = {
