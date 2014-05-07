@@ -15,6 +15,8 @@
 		E22C8A791918042100E16BC2 /* SDModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A781918042100E16BC2 /* SDModuleController.m */; };
 		E22C8A8E19182AB200E16BC2 /* SDMTStoreInformationModule-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22C8A8C19182AB200E16BC2 /* SDMTStoreInformationModule-iPhone.storyboard */; };
 		E22C8A9119194B2200E16BC2 /* SDMTStoreInformationModule-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22C8A8F19194B2200E16BC2 /* SDMTStoreInformationModule-iPad.storyboard */; };
+		E269F41C191AF72300946153 /* SDGlobalNavMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = E269F41B191AF72300946153 /* SDGlobalNavMenuController.m */; };
+		E269F41E191AF77900946153 /* SDDefaultModulesLayout.json in Resources */ = {isa = PBXBuildFile; fileRef = E269F41D191AF77900946153 /* SDDefaultModulesLayout.json */; };
 		E2A074B41909ADB700C70ECE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B31909ADB700C70ECE /* Foundation.framework */; };
 		E2A074B61909ADB700C70ECE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B51909ADB700C70ECE /* CoreGraphics.framework */; };
 		E2A074B81909ADB700C70ECE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A074B71909ADB700C70ECE /* UIKit.framework */; };
@@ -146,6 +148,7 @@
 		E2C1E5F6191A8E1300094340 /* HomeScreen_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C1E5EE191A8E1300094340 /* HomeScreen_iPad.storyboard */; };
 		E2C1E5F7191A8E1300094340 /* HomeScreen_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C1E5F0191A8E1300094340 /* HomeScreen_iPhone.storyboard */; };
 		E2C1E5F9191A8E1300094340 /* OrderHistory_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C1E5F4191A8E1300094340 /* OrderHistory_iPhone.storyboard */; };
+		E2C1E5FC191AF43E00094340 /* OrderHistory_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C1E5FA191AF43E00094340 /* OrderHistory_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +176,9 @@
 		E22C8A781918042100E16BC2 /* SDModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModuleController.m; path = SDModules/SDModuleController.m; sourceTree = "<group>"; };
 		E22C8A8D19182AB200E16BC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SDModulesTestHarness/Base.lproj/SDMTStoreInformationModule-iPhone.storyboard"; sourceTree = "<group>"; };
 		E22C8A9019194B2200E16BC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/SDMTStoreInformationModule-iPad.storyboard"; sourceTree = "<group>"; };
+		E269F41A191AF72300946153 /* SDGlobalNavMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGlobalNavMenuController.h; sourceTree = "<group>"; };
+		E269F41B191AF72300946153 /* SDGlobalNavMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGlobalNavMenuController.m; sourceTree = "<group>"; };
+		E269F41D191AF77900946153 /* SDDefaultModulesLayout.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SDDefaultModulesLayout.json; path = SDModulesTestHarness/SDDefaultModulesLayout.json; sourceTree = "<group>"; };
 		E2A074B01909ADB700C70ECE /* SDModulesTestHarness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDModulesTestHarness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A074B31909ADB700C70ECE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E2A074B51909ADB700C70ECE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -421,6 +427,7 @@
 		E2C1E5EF191A8E1300094340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen_iPad.storyboard; sourceTree = "<group>"; };
 		E2C1E5F1191A8E1300094340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen_iPhone.storyboard; sourceTree = "<group>"; };
 		E2C1E5F5191A8E1300094340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OrderHistory_iPhone.storyboard; sourceTree = "<group>"; };
+		E2C1E5FB191AF43E00094340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OrderHistory_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -530,6 +537,7 @@
 				E2A074BB1909ADB700C70ECE /* SDModulesTestHarness-Info.plist */,
 				E2A074BC1909ADB700C70ECE /* InfoPlist.strings */,
 				E2A074CE1909ADB700C70ECE /* Images.xcassets */,
+				E269F41D191AF77900946153 /* SDDefaultModulesLayout.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -873,8 +881,11 @@
 			children = (
 				E2C1E5EE191A8E1300094340 /* HomeScreen_iPad.storyboard */,
 				E2C1E5F0191A8E1300094340 /* HomeScreen_iPhone.storyboard */,
+				E2C1E5FA191AF43E00094340 /* OrderHistory_iPad.storyboard */,
 				E2C1E5F4191A8E1300094340 /* OrderHistory_iPhone.storyboard */,
 				E2C1E5DE191A8AD500094340 /* SDGlobalNavMenu.storyboard */,
+				E269F41A191AF72300946153 /* SDGlobalNavMenuController.h */,
+				E269F41B191AF72300946153 /* SDGlobalNavMenuController.m */,
 				E2C1E5E7191A8C3E00094340 /* CustomPullNavigationBarTabButton.h */,
 				E2C1E5E8191A8C3E00094340 /* CustomPullNavigationBarTabButton.m */,
 				E2C1E5E1191A8C0400094340 /* SDHomeScreenViewController.h */,
@@ -968,9 +979,11 @@
 				E22C8A9119194B2200E16BC2 /* SDMTStoreInformationModule-iPad.storyboard in Resources */,
 				E2C1E5E0191A8AD500094340 /* SDGlobalNavMenu.storyboard in Resources */,
 				E2A074CF1909ADB700C70ECE /* Images.xcassets in Resources */,
+				E2C1E5FC191AF43E00094340 /* OrderHistory_iPad.storyboard in Resources */,
 				E2C1E5F7191A8E1300094340 /* HomeScreen_iPhone.storyboard in Resources */,
 				E2A075CE190EBEC800C70ECE /* Global-iOS.xcconfig in Resources */,
 				E2A07605190EBEC800C70ECE /* SDPickerModalViewController-iOS7.xib in Resources */,
+				E269F41E191AF77900946153 /* SDDefaultModulesLayout.json in Resources */,
 				E2A07621190EBEC800C70ECE /* SDWebViewCell.xib in Resources */,
 				E2A074C71909ADB700C70ECE /* Main_iPhone.storyboard in Resources */,
 				E2A074BE1909ADB700C70ECE /* InfoPlist.strings in Resources */,
@@ -1002,6 +1015,7 @@
 				E2A074C01909ADB700C70ECE /* main.m in Sources */,
 				E2C1E5E9191A8C3E00094340 /* CustomPullNavigationBarTabButton.m in Sources */,
 				E2A07646190EEE3B00C70ECE /* SDModuleDescription.m in Sources */,
+				E269F41C191AF72300946153 /* SDGlobalNavMenuController.m in Sources */,
 				E2A075DF190EBEC800C70ECE /* SDDataMap.m in Sources */,
 				E2A07644190EEE3B00C70ECE /* SDModuleContainer.m in Sources */,
 				E2A075E3190EBEC800C70ECE /* UIDevice+machine.m in Sources */,
@@ -1221,6 +1235,14 @@
 				E2C1E5F5191A8E1300094340 /* Base */,
 			);
 			name = OrderHistory_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E2C1E5FA191AF43E00094340 /* OrderHistory_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2C1E5FB191AF43E00094340 /* Base */,
+			);
+			name = OrderHistory_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
