@@ -11,14 +11,36 @@
 #import "SDModulesClient.h"
 #import "SDModuleLayoutManager.h"
 
+#import "SDPullNavigation.h"
+#import "SDPullNavigationBar.h"
+#import "CustomPullNavigationBarTabButton.h"
+#import "SDHomeScreenViewController.h"
+#import "SDOrderHistoryViewController.h"
+
 #import "SDMTProductFeedModuleController.h"
 #import "SDMTMerchandisingModuleController.h"
 #import "SDMTStoreInformationModuleController.h"
+
+@interface SDAppDelegate()<SDPullNavigationSetupProtocol>
+@property (nonatomic, strong) SDHomeScreenViewController* homeScreenViewController;
+@property (nonatomic, strong) SDOrderHistoryViewController* orderHistoryController;
+@end
 
 @implementation SDAppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    // Apply global menu appearance
+
+    [SDPullNavigationBar setupDefaults];
+
+    [[NSBundle bundleForClass:[self class]] loadNibNamed:@"MainWindow" owner:self options:nil];
+    [SDPullNavigationManager sharedInstance].delegate = self;
+
+    self.window.rootViewController = [SDPullNavigationManager sharedInstance].globalPullNavController;
+    [self.window addSubview:[SDPullNavigationManager sharedInstance].globalPullNavController.view];
+    [self.window makeKeyAndVisible];
+    
     // Setup and SDModulesClient and fetch layouts
 
     NSArray* supportedStates = @[ @"signedin|signedout", @"instoremode|online-shopping" ];
@@ -64,29 +86,97 @@
 							
 - (void)applicationWillResignActive:(UIApplication*)application
 {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication*)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 - (void)applicationWillEnterForeground:(UIApplication*)application
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication*)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication*)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - SDPullNavigationSetup methods
+
+- (void)setupNavigationBar
+{
+    // Todo, chop this asset up and make it stretchable so that we can have variable sized adornments.
+
+    UIImage* stretchImage = [[UIImage imageNamed:@"global-menu-adornment-shelf"] resizableImageWithCapInsets:UIEdgeInsetsMake(0,9,0,9)];
+    UIImage* tabImage = [UIImage imageNamed:@"global-menu-adornment-tab"];
+    UIImage* globalMenuAdornment = [UIImage stretchImage:stretchImage
+                                                  toSize:(CGSize){ 320.0f, stretchImage.size.height }
+                                         andOverlayImage:tabImage
+                                             withOptions:SDImageCompositeOptionsPinSourceToTop |
+                                    SDImageCompositeOptionsCenterXOverlay |
+                                    SDImageCompositeOptionsPinOverlayToBottom];
+
+    [SDPullNavigationManager sharedInstance].pullNavigationBarViewClass = [SDPullNavigationBarControlsView class];
+    [SDPullNavigationManager sharedInstance].pullNavigationBarTabButtonClass = [CustomPullNavigationBarTabButton class];
+    [SDPullNavigationManager sharedInstance].globalMenuStoryboardId = @"SDGlobalNavMenu";
+    [SDPullNavigationManager sharedInstance].menuAdornmentImageOverlapHeight = stretchImage.size.height;
+    [SDPullNavigationManager sharedInstance].menuAdornmentBottomGap = 64.0f;
+
+    // Either use the globalMenuAdornment image or the three part one if you need it to stretch to fit a variable width adornment view.
+
+
+    if(1)
+    {
+        [[SDPullNavigationManager sharedInstance] menuAdornmentImageWithStretchImage:stretchImage
+                                                                      andCenterImage:tabImage
+                                                                  compositionOptions:SDImageCompositeOptionsPinSourceToTop |
+         SDImageCompositeOptionsCenterXOverlay |
+         SDImageCompositeOptionsPinOverlayToBottom];
+    }
+    else
+    {
+        [SDPullNavigationManager sharedInstance].menuAdornmentImage = globalMenuAdornment;
+    }
+}
+
+- (void)setupNavigationBarItems
+{
+    SDPullNavigationBarControlsView* leftBar = (SDPullNavigationBarControlsView*)[[SDPullNavigationManager sharedInstance] leftBarItemsView];
+    SDPullNavigationBarControlsView* rightBar = (SDPullNavigationBarControlsView*)[[SDPullNavigationManager sharedInstance] rightBarItemsView];
+
+    UIButton* leftTestButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [leftTestButton addTarget:self action:@selector(leftTestPressed:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton* rightTestButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    [rightTestButton addTarget:self action:@selector(rightTestPressed:) forControlEvents:UIControlEventTouchUpInside];
+
+    [leftBar addBarItem:leftTestButton];
+    [rightBar addBarItem:rightTestButton];
+}
+
+- (SDContainerViewController*)setupGlobalContainerViewController
+{
+    SDContainerViewController* globalPullNavController = [[SDContainerViewController alloc] initWithNibName:nil bundle:nil];
+
+    self.homeScreenViewController  = [SDHomeScreenViewController loadFromStoryboardNamed:@"HomeScreen" identifier:@"SDHomeScreenViewController"];
+	self.orderHistoryController = [SDOrderHistoryViewController loadFromStoryboardNamed:@"OrderHistory" identifier:@"SDOrderHistoryViewController"];
+
+    globalPullNavController.viewControllers = @[ [SDPullNavigationBar navControllerWithViewController:self.homeScreenViewController],
+												 [SDPullNavigationBar navControllerWithViewController:self.orderHistoryController]];
+
+    return globalPullNavController;
+}
+
+- (void)leftTestPressed:(id)sender
+{
+    SDLog(@"Hit left nav button");
+}
+
+- (void)rightTestPressed:(id)sender
+{
+    SDLog(@"Hit right nav button");
 }
 
 @end
