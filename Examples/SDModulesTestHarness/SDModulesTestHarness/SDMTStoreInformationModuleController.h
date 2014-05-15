@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "SDModuleController.h"
+#import "SDModuleControllerFactory.h"
 
-@interface SDMTStoreInformationModuleController : SDModuleController
+@interface SDMTStoreInformationModuleController : UIViewController<SDModuleControllerFactory>
 @end

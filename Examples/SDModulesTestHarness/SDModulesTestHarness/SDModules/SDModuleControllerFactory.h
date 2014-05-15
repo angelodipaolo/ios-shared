@@ -8,5 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SDModuleController : UIViewController
+@protocol SDModuleControllerFactory <NSObject>
+- (instancetype)moduleWithDictionary:(NSDictionary*)factoryData;
 @end

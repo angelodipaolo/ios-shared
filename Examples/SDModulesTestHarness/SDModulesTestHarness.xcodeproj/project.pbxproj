@@ -12,7 +12,6 @@
 		E22C8A701918037F00E16BC2 /* SDMTProductFeedModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A6F1918037F00E16BC2 /* SDMTProductFeedModuleController.m */; };
 		E22C8A75191803EA00E16BC2 /* SDMTMerchandisingModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A72191803EA00E16BC2 /* SDMTMerchandisingModuleController.m */; };
 		E22C8A76191803EA00E16BC2 /* SDMTStoreInformationModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A74191803EA00E16BC2 /* SDMTStoreInformationModuleController.m */; };
-		E22C8A791918042100E16BC2 /* SDModuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C8A781918042100E16BC2 /* SDModuleController.m */; };
 		E22C8A8E19182AB200E16BC2 /* SDMTStoreInformationModule-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22C8A8C19182AB200E16BC2 /* SDMTStoreInformationModule-iPhone.storyboard */; };
 		E22C8A9119194B2200E16BC2 /* SDMTStoreInformationModule-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22C8A8F19194B2200E16BC2 /* SDMTStoreInformationModule-iPad.storyboard */; };
 		E269F41C191AF72300946153 /* SDGlobalNavMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = E269F41B191AF72300946153 /* SDGlobalNavMenuController.m */; };
@@ -172,8 +171,7 @@
 		E22C8A72191803EA00E16BC2 /* SDMTMerchandisingModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMTMerchandisingModuleController.m; sourceTree = "<group>"; };
 		E22C8A73191803EA00E16BC2 /* SDMTStoreInformationModuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMTStoreInformationModuleController.h; sourceTree = "<group>"; };
 		E22C8A74191803EA00E16BC2 /* SDMTStoreInformationModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMTStoreInformationModuleController.m; sourceTree = "<group>"; };
-		E22C8A771918042100E16BC2 /* SDModuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModuleController.h; path = SDModules/SDModuleController.h; sourceTree = "<group>"; };
-		E22C8A781918042100E16BC2 /* SDModuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDModuleController.m; path = SDModules/SDModuleController.m; sourceTree = "<group>"; };
+		E22C8A771918042100E16BC2 /* SDModuleControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDModuleControllerFactory.h; path = SDModules/SDModuleControllerFactory.h; sourceTree = "<group>"; };
 		E22C8A8D19182AB200E16BC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SDModulesTestHarness/Base.lproj/SDMTStoreInformationModule-iPhone.storyboard"; sourceTree = "<group>"; };
 		E22C8A9019194B2200E16BC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/SDMTStoreInformationModule-iPad.storyboard"; sourceTree = "<group>"; };
 		E269F41A191AF72300946153 /* SDGlobalNavMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGlobalNavMenuController.h; sourceTree = "<group>"; };
@@ -858,8 +856,7 @@
 		E2A07636190ED10400C70ECE /* SDModules */ = {
 			isa = PBXGroup;
 			children = (
-				E22C8A771918042100E16BC2 /* SDModuleController.h */,
-				E22C8A781918042100E16BC2 /* SDModuleController.m */,
+				E22C8A771918042100E16BC2 /* SDModuleControllerFactory.h */,
 				E2A0763E190EEE3B00C70ECE /* SDModuleContainer.h */,
 				E2A0763F190EEE3B00C70ECE /* SDModuleContainer.m */,
 				E2A07640190EEE3B00C70ECE /* SDModuleContainerLayout.h */,
@@ -1077,7 +1074,6 @@
 				E2A07601190EBEC800C70ECE /* SDNumberTextField.m in Sources */,
 				E2A075E0190EBEC800C70ECE /* SDModelObject.m in Sources */,
 				E22C8A701918037F00E16BC2 /* SDMTProductFeedModuleController.m in Sources */,
-				E22C8A791918042100E16BC2 /* SDModuleController.m in Sources */,
 				E2A075F1190EBEC800C70ECE /* SDCheckbox.m in Sources */,
 				E2A075E6190EBEC800C70ECE /* CLLocation+SDExtensions.m in Sources */,
 				E2A0762A190EBEC800C70ECE /* UIViewController+SDExtensions.m in Sources */,

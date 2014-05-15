@@ -10,4 +10,9 @@
 
 @implementation SDMTMerchandisingModuleController
 
+- (instancetype)moduleWithDictionary:(NSDictionary*)factoryData
+{
+    return [[self class] init];
+}
+
 @end

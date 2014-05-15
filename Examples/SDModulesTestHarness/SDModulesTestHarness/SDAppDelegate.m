@@ -49,13 +49,15 @@
                                         @"store-information" : [SDMTStoreInformationModuleController class] };
 
     // Intialize our global copy of the modules client.
+
     self.moduleClient = [[SDModulesClient alloc] init];
 
     // Get a default layout to use until the server returns the configured layouts.
 
     [self.moduleClient setDefaultModuleLayoutsForStates:supportedStates andRegisteredModules:supportedModules];
 
-    // Connect to the server
+    // Connect to the server.
+
     [self.moduleClient connectWithApplicationKey:@"com.walmart.sdmodulestestharness.ipad"
                                    andPrivateKey:@"private-key"
                            withCompletionHandler:^(NSError* error)
