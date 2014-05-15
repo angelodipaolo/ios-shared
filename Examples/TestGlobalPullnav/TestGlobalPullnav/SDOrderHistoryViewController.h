@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SDOrderHistoryViewController : UITableViewController
+@interface SDOrderHistoryViewController : UIViewController
 @end
