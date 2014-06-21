@@ -10,6 +10,16 @@
 
 @implementation SDModuleLayoutManager
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        self.layoutStyle = SDLayoutStyleVerticalStack;
+    }
+    return self;
+}
+
 + (instancetype)managerWithJSONFileURL:(NSURL*)defaultLayoutURL
 {
     NSAssert(defaultLayoutURL, @"Must provide URL for the layout JSON file to be used as a default.");
@@ -80,6 +90,47 @@
     NSError *error = nil;
 
     return [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+}
+
+- (void)layout
+{
+    if (self.modulesViewControllers.count == 0)
+    {
+        return;
+    }
+    
+    // First remove any existing child VCs.
+    // TODO: Keep the ones that are in the incoming array.
+    NSArray* children = [NSArray arrayWithArray:self.containerViewController.childViewControllers];
+    [children enumerateObjectsUsingBlock:^(UIViewController* aChildVC, NSUInteger idx, BOOL *stop)
+     {
+         [aChildVC.view removeFromSuperview];
+         [aChildVC removeFromParentViewController];
+     }];
+    
+    // Remove any other views, such as the backing scroll view
+    [self.containerViewController.view.subviews enumerateObjectsUsingBlock:^(UIView* aSubview, NSUInteger idx, BOOL *stop)
+    {
+        [aSubview removeFromSuperview];
+    }];
+    
+    NSAssert(self.containerViewController.childViewControllers != 0, @"Container still has children!");
+    
+    if (self.layoutStyle == SDLayoutStyleVerticalStack)
+    {
+        UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:self.containerViewController.view.bounds];
+        [self.containerViewController.view addSubview:scrollView];
+        CGFloat heightPerView = 300.0f;
+        [self.modulesViewControllers enumerateObjectsUsingBlock:^(UIViewController* aVC, NSUInteger idx, BOOL *stop)
+        {
+            [aVC willMoveToParentViewController:self.containerViewController];
+            [self.containerViewController addChildViewController:aVC];
+            [aVC didMoveToParentViewController:self.containerViewController];
+            aVC.view.frame = CGRectMake(0.0f, heightPerView * idx, self.containerViewController.view.bounds.size.width, heightPerView);
+            [scrollView addSubview:aVC.view];
+        }];
+        scrollView.contentSize = CGSizeMake(scrollView.bounds.size.width, heightPerView * self.modulesViewControllers.count);
+    }
 }
 
 @end

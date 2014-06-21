@@ -11,5 +11,9 @@
 @class SDModuleContainerLayout;
 
 @interface SDModuleContainer : UIView
+
 @property (nonatomic, strong) SDModuleContainerLayout* layout;
+@property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSArray* modules;
+
 @end

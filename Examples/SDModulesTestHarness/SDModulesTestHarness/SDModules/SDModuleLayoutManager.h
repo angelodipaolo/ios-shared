@@ -8,13 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@class SDModuleContainer;
+typedef NS_ENUM(NSUInteger, SDLayoutStyle) {
+    SDLayoutStyleVerticalStack
+};
 
 @interface SDModuleLayoutManager : NSObject
 
-@property (nonatomic, strong) SDModuleContainer* moduleLayoutContainer;
+@property (nonatomic, assign) SDLayoutStyle layoutStyle;
+@property (nonatomic, strong) NSArray* modulesViewControllers;
+@property (nonatomic, strong) UIViewController* containerViewController;
 
 + (instancetype)managerWithJSONFileURL:(NSURL*)defaultLayoutURL;
 + (instancetype)managerWithDictionary:(NSDictionary*)fetchLayoutsResult;
+
+- (void)layout;
 
 @end
