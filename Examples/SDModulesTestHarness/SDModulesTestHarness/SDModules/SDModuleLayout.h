@@ -1,15 +1,17 @@
 //
 //  SDModuleLayout.h
-//  SDModules
+//  Glimpse
 //
-//  Created by Steven Woolgar on 05/01/2014.
-//  Copyright (c) 2014 Wal-mart Stores, Inc. All rights reserved.
+//  Created by Sam Grover on 6/23/14.
+//  Copyright (c) 2014 Walmart. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface SDModuleLayout : NSObject
+@protocol SDModuleLayout <NSObject>
 
-@property (nonatomic, strong) NSArray* modules;
+@property (nonatomic, copy, readonly) NSString* moduleId;
+@property (nonatomic, readonly) NSUInteger version;
+@property (nonatomic, readonly) NSUInteger contentZone;
 
 @end

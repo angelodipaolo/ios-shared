@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, SDLayoutStyle) {
 @interface SDModuleLayoutManager : NSObject
 
 @property (nonatomic, assign) SDLayoutStyle layoutStyle;
-@property (nonatomic, strong) NSArray* modulesViewControllers;
+@property (nonatomic, strong) NSArray* modulesViewControllers; // Array of UIViewController<SDModuleLayout>
 @property (nonatomic, strong) UIViewController* containerViewController;
 
 + (instancetype)managerWithJSONFileURL:(NSURL*)defaultLayoutURL;

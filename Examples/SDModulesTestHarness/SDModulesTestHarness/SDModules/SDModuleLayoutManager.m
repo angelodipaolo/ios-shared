@@ -7,6 +7,7 @@
 //
 
 #import "SDModuleLayoutManager.h"
+#import "SDModuleLayout.h"
 
 @implementation SDModuleLayoutManager
 
@@ -92,6 +93,16 @@
     return [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
 }
 
+- (void)setModulesViewControllers:(NSArray *)modulesViewControllers
+{
+    for (id aVC in modulesViewControllers)
+    {
+        NSString* messageString = [NSString stringWithFormat:@"The object %@ is not of the correct type. It must be a %@ that conforms to %@.", aVC, NSStringFromClass([UIViewController class]), NSStringFromProtocol(@protocol(SDModuleLayout))];
+        NSAssert([aVC isKindOfClass:[UIViewController class]] && [aVC conformsToProtocol:@protocol(SDModuleLayout)], messageString);
+    }
+    _modulesViewControllers = modulesViewControllers;
+}
+
 - (void)layout
 {
     if (self.modulesViewControllers.count == 0)
@@ -116,20 +127,28 @@
     
     NSAssert(self.containerViewController.childViewControllers != 0, @"Container still has children!");
     
+    // Sort the view controllers by zone
+    NSArray* sortedVCs = [self.modulesViewControllers sortedArrayUsingComparator:^NSComparisonResult(UIViewController<SDModuleLayout>* vc1, UIViewController<SDModuleLayout>* vc2)
+    {
+        return vc1.contentZone > vc2.contentZone;
+    }];
+    
     if (self.layoutStyle == SDLayoutStyleVerticalStack)
     {
         UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:self.containerViewController.view.bounds];
         [self.containerViewController.view addSubview:scrollView];
-        CGFloat heightPerView = 300.0f;
-        [self.modulesViewControllers enumerateObjectsUsingBlock:^(UIViewController* aVC, NSUInteger idx, BOOL *stop)
+        __block CGFloat yOffset = 0.0f;
+        [sortedVCs enumerateObjectsUsingBlock:^(UIViewController<SDModuleLayout>* aVC, NSUInteger idx, BOOL *stop)
         {
             [aVC willMoveToParentViewController:self.containerViewController];
             [self.containerViewController addChildViewController:aVC];
             [aVC didMoveToParentViewController:self.containerViewController];
-            aVC.view.frame = CGRectMake(0.0f, heightPerView * idx, self.containerViewController.view.bounds.size.width, heightPerView);
+            CGFloat viewHeight = aVC.preferredContentSize.height;
+            aVC.view.frame = CGRectMake(0.0f, yOffset, self.containerViewController.view.bounds.size.width, viewHeight);
+            yOffset += viewHeight;
             [scrollView addSubview:aVC.view];
         }];
-        scrollView.contentSize = CGSizeMake(scrollView.bounds.size.width, heightPerView * self.modulesViewControllers.count);
+        scrollView.contentSize = CGSizeMake(scrollView.bounds.size.width, yOffset);
     }
 }
 
